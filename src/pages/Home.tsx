@@ -5,11 +5,10 @@ export function Home() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-6 pt-24 pb-12">
         <div className="absolute inset-0 z-0 flex items-center justify-center">
           <div className="w-[800px] h-[800px] rounded-full neon-glow-cyan opacity-20 pointer-events-none absolute blur-[100px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050507]/60 to-[#050507]"></div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <span className="inline-block px-4 py-1 rounded-full glass-card text-xs font-bold tracking-[0.2em] text-cyan-400 mb-6 uppercase">
-            L'INTERFACCIA CELESTE
+            Simone coglione
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-syne font-extrabold leading-tight mb-8 tracking-tighter text-white">
             Realtà virtuali. <span className="bg-gradient-to-r from-cyan-300 to-primary-container bg-clip-text text-transparent italic">Emozioni reali.</span>
@@ -89,10 +88,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="glass-card rounded-xl p-4 md:p-8 overflow-hidden relative group">
             <div className="aspect-video w-full rounded-lg overflow-hidden relative">
-              <img 
-                alt="Demo Video Placeholder" 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByPekBo8o9c2SZGd3P9U4s-z9yMw8kw3MX9N2SSr3pqw9e2HM-tZYOZ-kCFUWNBkcLB9qsQjrXiCOPNVAdhw8m-NXpxDcGkSGZX9SpaHdQ6aZ6BziGrdBzecz2H23KYitUCuhEQ6UTIYZEhvC7g18CchJQBtI4g8Yku7n1eDszYinsFaS7SKl_wbSgs_m-1CzFtFGPvzC7nuK_49sqdttOLYYH6XqXN4ocX8eIfYmhH0MaGeereLXTnN-d3Ha2alZnpZ6QTAJhKnI" 
+              <img
+                alt="Demo Video Placeholder"
+                className="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByPekBo8o9c2SZGd3P9U4s-z9yMw8kw3MX9N2SSr3pqw9e2HM-tZYOZ-kCFUWNBkcLB9qsQjrXiCOPNVAdhw8m-NXpxDcGkSGZX9SpaHdQ6aZ6BziGrdBzecz2H23KYitUCuhEQ6UTIYZEhvC7g18CchJQBtI4g8Yku7n1eDszYinsFaS7SKl_wbSgs_m-1CzFtFGPvzC7nuK_49sqdttOLYYH6XqXN4ocX8eIfYmhH0MaGeereLXTnN-d3Ha2alZnpZ6QTAJhKnI"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-gray-950/40 group-hover:bg-gray-950/20 transition-all cursor-pointer">
                 <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border border-primary/40 flex items-center justify-center bg-primary/10 backdrop-blur-md group-hover:scale-110 transition-all">

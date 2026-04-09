@@ -16,8 +16,9 @@ export function Layout() {
           <Link to="/" className="flex items-center gap-3">
             <img 
               alt="Vision AR Logo" 
-              className="h-12 w-auto object-contain mix-blend-screen" 
-              src={logoSrc} 
+              className="h-10 w-auto object-contain" 
+              src={logoSrc}
+              style={{ mixBlendMode: 'screen' }}
             />
           </Link>
           <div className="hidden md:flex items-center gap-10 font-headline tracking-tight">
