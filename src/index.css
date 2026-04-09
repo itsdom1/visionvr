@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-primary-fixed-variant: #005762;
+  --color-surface-bright: #2c2c30;
+  --color-secondary-fixed-dim: #10d5ff;
+  --color-on-tertiary-fixed-variant: #003971;
+  --color-on-error-container: #ffa8a3;
+  --color-surface-container-highest: #262529;
+  --color-outline: #767578;
+  --color-tertiary-fixed: #80b2ff;
+  --color-surface-container: #19191d;
+  --color-secondary-dim: #00c6ee;
+  --color-surface: #0e0e11;
+  --color-on-primary-container: #004d57;
+  --color-tertiary-fixed-dim: #65a4ff;
+  --color-inverse-surface: #fcf8fc;
+  --color-on-surface-variant: #adaaae;
+  --color-on-tertiary-container: #001d3f;
+  --color-tertiary: #70aaff;
+  --color-on-secondary-fixed: #003a47;
+  --color-on-secondary-fixed-variant: #00586b;
+  --color-on-surface: #fcf8fc;
+  --color-on-primary: #005762;
+  --color-surface-container-lowest: #000000;
+  --color-on-tertiary: #002a55;
+  --color-primary: #81ecff;
+  --color-surface-container-low: #131316;
+  --color-error: #ff716c;
+  --color-error-dim: #d7383b;
+  --color-on-primary-fixed: #003840;
+  --color-on-tertiary-fixed: #001835;
+  --color-error-container: #9f0519;
+  --color-outline-variant: #48474b;
+  --color-surface-dim: #0e0e11;
+  --color-primary-fixed-dim: #00d4ec;
+  --color-secondary: #10d5ff;
+  --color-tertiary-dim: #5c9ffc;
+  --color-on-background: #fcf8fc;
+  --color-inverse-primary: #006976;
+  --color-on-error: #490006;
+  --color-surface-variant: #262529;
+  --color-on-secondary: #004554;
+  --color-secondary-fixed: #78dfff;
+  --color-primary-container: #00e3fd;
+  --color-tertiary-container: #599cf9;
+  --color-surface-container-high: #1f1f23;
+  --color-primary-dim: #00d4ec;
+  --color-background: #0e0e11;
+  --color-on-secondary-container: #edfaff;
+  --color-inverse-on-surface: #565458;
+  --color-secondary-container: #00677d;
+  --color-surface-tint: #81ecff;
+  --color-primary-fixed: #00e3fd;
+
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    background-color: #050507;
+    color: #fcf8fc;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(38, 37, 41, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .neon-glow-cyan {
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, rgba(0, 229, 255, 0) 70%);
+  }
+  .neon-glow-purple {
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, rgba(147, 51, 234, 0) 70%);
+  }
+
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(19, 214, 236, 0.3);
+    border-left: 1px solid rgba(19, 214, 236, 0.3);
+  }
+  .grayscale-hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+  .glass-card-hover:hover .grayscale-hover {
+    filter: grayscale(0%);
+  }
+  .form-input-line {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+  }
+  .form-input-line:focus {
+    outline: none;
+    border-bottom: 1px solid #13d6ec;
+    box-shadow: 0 4px 10px -4px rgba(19, 214, 236, 0.3);
+  }
+  .form-input-line::placeholder {
+    color: transparent;
+  }
+  .relative-input-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .floating-label {
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    color: #8A8D98;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    font-size: 1rem;
+  }
+  .form-input-line:focus ~ .floating-label,
+  .form-input-line:not(:placeholder-shown) ~ .floating-label {
+    top: -1rem;
+    font-size: 0.8rem;
+    color: #13d6ec;
+    text-shadow: 0 0 8px rgba(19, 214, 236, 0.4);
+  }
+  select.form-input-line option {
+    background-color: #050507;
+    color: white;
+  }
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .text-glow-primary {
+    text-shadow: 0 0 15px rgba(19, 214, 236, 0.5);
+  }
+}

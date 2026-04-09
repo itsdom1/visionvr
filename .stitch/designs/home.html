@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vision AR | Reality, Upgraded.</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#005762",
+                    "surface-bright": "#2c2c30",
+                    "secondary-fixed-dim": "#10d5ff",
+                    "on-tertiary-fixed-variant": "#003971",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container-highest": "#262529",
+                    "outline": "#767578",
+                    "tertiary-fixed": "#80b2ff",
+                    "surface-container": "#19191d",
+                    "secondary-dim": "#00c6ee",
+                    "surface": "#0e0e11",
+                    "on-primary-container": "#004d57",
+                    "tertiary-fixed-dim": "#65a4ff",
+                    "inverse-surface": "#fcf8fc",
+                    "on-surface-variant": "#adaaae",
+                    "on-tertiary-container": "#001d3f",
+                    "tertiary": "#70aaff",
+                    "on-secondary-fixed": "#003a47",
+                    "on-secondary-fixed-variant": "#00586b",
+                    "on-surface": "#fcf8fc",
+                    "on-primary": "#005762",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary": "#002a55",
+                    "primary": "#81ecff",
+                    "surface-container-low": "#131316",
+                    "error": "#ff716c",
+                    "error-dim": "#d7383b",
+                    "on-primary-fixed": "#003840",
+                    "on-tertiary-fixed": "#001835",
+                    "error-container": "#9f0519",
+                    "outline-variant": "#48474b",
+                    "surface-dim": "#0e0e11",
+                    "primary-fixed-dim": "#00d4ec",
+                    "secondary": "#10d5ff",
+                    "tertiary-dim": "#5c9ffc",
+                    "on-background": "#fcf8fc",
+                    "inverse-primary": "#006976",
+                    "on-error": "#490006",
+                    "surface-variant": "#262529",
+                    "on-secondary": "#004554",
+                    "secondary-fixed": "#78dfff",
+                    "primary-container": "#00e3fd",
+                    "tertiary-container": "#599cf9",
+                    "surface-container-high": "#1f1f23",
+                    "primary-dim": "#00d4ec",
+                    "background": "#0e0e11",
+                    "on-secondary-container": "#edfaff",
+                    "inverse-on-surface": "#565458",
+                    "secondary-container": "#00677d",
+                    "surface-tint": "#81ecff",
+                    "primary-fixed": "#00e3fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "syne": ["Syne"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050507;
+            color: #fcf8fc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(38, 37, 41, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .neon-glow-cyan {
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, rgba(0, 229, 255, 0) 70%);
+        }
+        .neon-glow-purple {
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, rgba(147, 51, 234, 0) 70%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30 selection:text-primary">
+<!-- Glowing Meshes (Background Decoration) -->
+<div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] neon-glow-cyan pointer-events-none z-0"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] neon-glow-purple pointer-events-none z-0"></div>
+<!-- Navigation Shell -->
+<nav class="sticky top-0 w-full z-50 bg-gray-950/40 backdrop-blur-3xl shadow-[0_0_40px_-10px_rgba(0,229,255,0.05)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Vision AR Logo" class="h-10 w-10 object-contain" data-alt="Futuristic organic abstract logo with fluid curves in cyan and white on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYny789LQA5H1aVYVT_LK3jpF9i_WQG5TTLrmxNlR8IwHJhwD3-a9OBF3gihgM-pbLYOUY2SISqrlWRg7GpT5_vOTCMpL8E8h628pDJG8Z7-y13dzvbOLmuQxmDf56CQuWGHyoHlZ-6D2rMa3rMsKOvppD3Jmn9jBGCrpZbcYLstU74eqT_lfYrsZYnTRwBQ45buzrSMhP7-irBR_SfxxNPu34ixXDmH2bHCW78ym9WuOk8jC6e8J0rYxYcG5b0lB6kBBUxiv_zgM" style=""/>
+<span class="text-2xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent font-headline tracking-tight" style="">Vision AR</span>
+</div>
+<div class="hidden md:flex items-center gap-10 font-headline tracking-tight"><a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" href="#">Home</a>
+<a class="text-gray-400 hover:text-cyan-200 transition-colors" href="#">Chi Siamo</a>
+<a class="text-gray-400 hover:text-cyan-200 transition-colors" href="#">Contatti</a></div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed px-6 py-2.5 rounded-full font-bold hover:shadow-[0_0_20px_rgba(0,229,255,0.5)] transition-all duration-300 scale-95 active:scale-90" style="">Prenota la tua realtà</button>
+</div>
+</nav>
+<main class="relative z-10">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden px-6">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-40 mix-blend-lighten" data-alt="First-person POV of a person wearing an AR headset looking at a digital interface floating over a futuristic city at night with neon lights" src="https://lh3.googleusercontent.com/aida/ADBb0uhoj_lX6Cii3VH99ZiPCtoKLs8ONytwVhXnwdjsmlAzI1ukyf_glb70S3ecFqlYl5XUWxggh23PKLtMWn0-QhB_gahTV09cWP6rfH9ZxMI32mVZxRmN3PEiLkuA31MOSnUj9uiUJjAdxyEAZ2L-tZ4fZpILZh9p449DYx9KdOLxEDc_V9-BNolXD1Zdbeb4gxGKl9WZ_muNNas_P6CMkIgqppRX3kWBqo6GQZjzJyh38kMgNHdkSyuVuYnXtg-unhQPg9qjnbIY" style=""/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050507]/60 to-[#050507]"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto">
+<span class="inline-block px-4 py-1 rounded-full glass-card text-xs font-bold tracking-[0.2em] text-cyan-400 mb-6 uppercase" style="">L'INTERFACCIA CELESTE</span>
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-syne font-extrabold leading-tight mb-8 tracking-tighter text-white" style="">Realtà virtuali. <span class="bg-gradient-to-r from-cyan-300 to-primary-container bg-clip-text text-transparent italic">Emozioni reali.</span></h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed" style="">Entra in una nuova dimensione dove l'informazione digitale si fonde perfettamente con il tuo mondo fisico. Sperimenta il futuro dello spatial computing.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-on-primary font-extrabold text-lg shadow-[0_0_30px_rgba(0,229,255,0.4)] hover:scale-105 active:scale-95 transition-all" style="">Sperimenta la Visione</button>
+<button class="w-full sm:w-auto px-8 py-4 rounded-full glass-card font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2" style=""><span class="material-symbols-outlined">play_circle</span> Guarda il Lancio</button>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-syne font-bold mb-6 text-on-surface" style="">L'Ecosistema.</h2>
+<p class="text-on-surface-variant text-lg" style="">Non vendiamo solo hardware; forniamo l'intera infrastruttura per il tuo viaggio spaziale.</p>
+</div>
+<div class="hidden md:block h-[1px] flex-grow bg-white/10 mx-12 mb-4"></div>
+<span class="text-on-surface-variant font-headline text-sm tracking-widest uppercase" style="">01 / SERVIZI</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-card p-10 rounded-xl group hover:border-cyan-400/40 transition-all duration-500 hover:shadow-[0_0_40px_-10px_rgba(0,229,255,0.2)]">
+<div class="mb-8 w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-400 text-3xl" style='font-variation-settings: "FILL" 1;'>headset</span>
+</div>
+<h3 class="text-2xl font-syne font-bold text-white mb-4" style="">Visori Premium</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8" style="">Hardware di nuova generazione con display 8K e passthrough a bassa latenza per un'immersione totale.</p>
+<a class="inline-flex items-center gap-2 text-cyan-400 font-bold group-hover:translate-x-2 transition-transform" href="#" style="">Esplora l'Hardware <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-10 rounded-xl group hover:border-cyan-400/40 transition-all duration-500 hover:shadow-[0_0_40px_-10px_rgba(0,229,255,0.2)]">
+<div class="mb-8 w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-400 text-3xl" style='font-variation-settings: "FILL" 1;'>support_agent</span>
+</div>
+<h3 class="text-2xl font-syne font-bold text-white mb-4" style="">Esperti in Sede</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8" style="">Concierge personali disponibili presso la tua sede per guidarti nei tuoi primi passi nella realtà mista.</p>
+<a class="inline-flex items-center gap-2 text-cyan-400 font-bold group-hover:translate-x-2 transition-transform" href="#" style="">Incontra gli Specialisti <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-10 rounded-xl group hover:border-cyan-400/40 transition-all duration-500 hover:shadow-[0_0_40px_-10px_rgba(0,229,255,0.2)]">
+<div class="mb-8 w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-400 text-3xl" style='font-variation-settings: "FILL" 1;'>bolt</span>
+</div>
+<h3 class="text-2xl font-syne font-bold text-white mb-4" style="">Configurazione Immediata</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8" style="">Sincronizzazione cloud a zero configurazione. Apri, indossa ed entra direttamente nel tuo spazio di lavoro personalizzato.</p>
+<a class="inline-flex items-center gap-2 text-cyan-400 font-bold group-hover:translate-x-2 transition-transform" href="#" style="">Visualizza il Processo <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- Demo Section -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="glass-card rounded-xl p-4 md:p-8 overflow-hidden relative group">
+<!-- Background Image for Demo -->
+<div class="aspect-video w-full rounded-lg overflow-hidden relative">
+<img alt="Demo Video Placeholder" class="w-full h-full object-cover" data-alt="Sleek close-up shot of a chrome AR headset reflecting neon blue lights in a dark minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByPekBo8o9c2SZGd3P9U4s-z9yMw8kw3MX9N2SSr3pqw9e2HM-tZYOZ-kCFUWNBkcLB9qsQjrXiCOPNVAdhw8m-NXpxDcGkSGZX9SpaHdQ6aZ6BziGrdBzecz2H23KYitUCuhEQ6UTIYZEhvC7g18CchJQBtI4g8Yku7n1eDszYinsFaS7SKl_wbSgs_m-1CzFtFGPvzC7nuK_49sqdttOLYYH6XqXN4ocX8eIfYmhH0MaGeereLXTnN-d3Ha2alZnpZ6QTAJhKnI" style=""/>
+<!-- Video Play Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-gray-950/40 group-hover:bg-gray-950/20 transition-all cursor-pointer">
+<div class="w-20 h-20 md:w-28 md:h-28 rounded-full border border-primary/40 flex items-center justify-center bg-primary/10 backdrop-blur-md group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-5xl md:text-7xl text-primary" style='font-variation-settings: "FILL" 1;'>play_arrow</span>
+</div>
+</div>
+<!-- Info Bar -->
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div class="glass-card px-6 py-4 rounded-lg"><p class="text-white font-bold text-lg">Tour del Prodotto 2024</p>
+<p class="text-cyan-400 text-sm">Durata: 2:45</p></div>
+<div class="hidden md:flex gap-4">
+<div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-white"><span class="material-symbols-outlined" style="">hd</span></div>
+<div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-white"><span class="material-symbols-outlined" style="">volume_up</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6 relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] neon-glow-cyan opacity-40 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-5xl md:text-7xl font-syne font-black mb-8 leading-tight" style="">Pronti a vedere le cose <span class="text-primary italic">diversamente?</span></h2>
+<p class="text-xl text-on-surface-variant mb-12" style="">Unisciti alla lista d'attesa per la prossima generazione dello spatial computing.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 rounded-full bg-white text-gray-950 font-black text-xl hover:scale-105 transition-all" style="">Pre-ordina ora</button>
+<button class="w-full sm:w-auto px-10 py-5 rounded-full border border-white/20 backdrop-blur-md text-white font-bold text-xl hover:bg-white/5 transition-all" style="">Parla con il team vendite</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-gray-950 border-t border-white/5 relative z-10">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center px-12 gap-8"><a class="text-gray-500 hover:text-cyan-300 transition-colors" href="#">Instagram</a>
+<a class="text-gray-500 hover:text-cyan-300 transition-colors" href="#">LinkedIn</a>
+<a class="text-gray-500 hover:text-cyan-300 transition-colors" href="#">Twitter</a>
+<a class="text-gray-500 hover:text-cyan-300 transition-colors" href="#">Contatti</a></div>
+</footer>
+<!-- Floating Action Button (FAB) - Suppression Logic: Hidden on home if not primary action -->
+<button class="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-primary text-on-primary-fixed shadow-[0_0_30px_rgba(0,229,255,0.5)] flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined text-3xl" style="">chat_bubble</span>
+</button>
+</body></html>
